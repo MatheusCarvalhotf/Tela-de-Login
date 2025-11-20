@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0a0a;
+  min-height: 100vh;
+  color: #fff;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Estilos base para componentes */
+.bg-base-100 {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-square {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost {
+  border: none;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.stroke-current {
+  stroke: currentColor;
+}
+
+/* Textarea e inputs */
+.textarea,
+.input {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 5px;
+  width: 100%;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.textarea:focus,
+.input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.textarea-bordered,
+.input-bordered {
+  border: 1px solid #333;
+}
+
+/* Select */
+.select {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.select-bordered {
+  border: 1px solid #333;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #0a0a0a;
+  border-bottom: 1px solid #333;
+}
+
+.table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.table tbody tr {
+  transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Cores de botões */
+.btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-info {
+  background: transparent;
+  color: #6ea8ff;
+  border-color: #6ea8ff;
+}
+
+.btn-info:hover {
+  background: #6ea8ff;
+  color: #000;
+}
+
+.btn-error {
+  background: transparent;
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.btn-error:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Utilitários */
+.bg-base-200 {
+  background: #1a1a1a;
+}
+
+.rounded-lg {
+  border-radius: 10px;
+}
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+.p-4 { padding: 1rem; }
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-warning {
+  color: #ffd93d;
+}
+
+.text-success {
+  color: #6bcf7f;
+}
+
+.text-gray-500 {
+  color: #888;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.right-2 { right: 0.5rem; }
+.top-2 { top: 0.5rem; }
+
+/* Overflow */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+/* Layout principal */
+.layout {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.main-content {
+  padding: 1rem;
+}
