@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* Estilos base para componentes */
+
 .bg-base-100 {
   background: #1a1a1a;
   border-bottom: 1px solid #333;
@@ -84,7 +84,7 @@ body {
   stroke: currentColor;
 }
 
-/* Textarea e inputs */
+
 .textarea,
 .input {
   background: #0a0a0a;
@@ -276,12 +276,12 @@ body {
 .right-2 { right: 0.5rem; }
 .top-2 { top: 0.5rem; }
 
-/* Overflow */
+
 .overflow-x-auto {
   overflow-x: auto;
 }
 
-/* Layout principal */
+
 .layout {
   min-height: 100vh;
   background: #0a0a0a;

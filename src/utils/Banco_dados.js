@@ -3,7 +3,7 @@ const DB_VERSION = 2;
 const STORE_NAME = 'notes';
 const USERS_STORE = 'users';
 
-// Chave do usuário atual no localStorage (permanente)
+
 const CURRENT_USER_KEY = 'current_user';
 
 async function openDB() {
@@ -23,7 +23,7 @@ async function openDB() {
   });
 }
 
-// ==== AUTENTICAÇÃO ====
+
 
 export function getCurrentUser() {
   const user = localStorage.getItem(CURRENT_USER_KEY);
@@ -48,7 +48,7 @@ export async function registerUser(username, password) {
     const tx = db.transaction(USERS_STORE, 'readwrite');
     const store = tx.objectStore(USERS_STORE);
     
-    // Verifica se usuário já existe
+    
     const checkReq = store.get(username);
     checkReq.onsuccess = () => {
       if (checkReq.result) {
@@ -56,10 +56,10 @@ export async function registerUser(username, password) {
         return;
       }
       
-      // Cria novo usuário
+      
       const user = {
         username,
-        password, // IMPORTANTE: Em produção, use hash (bcrypt)!
+        password, 
         createdAt: new Date().toISOString()
       };
       
@@ -94,7 +94,7 @@ export async function loginUser(username, password) {
   });
 }
 
-// ==== HELPER PARA CHAVE POR USUÁRIO ====
+
 
 function getUserKey(key) {
   const user = getCurrentUser();
@@ -102,7 +102,7 @@ function getUserKey(key) {
   return `${user.username}:${key}`;
 }
 
-// ==== NOTAS (IndexedDB - com isolamento por usuário) ====
+
 
 export async function getNote(key) {
   if (!key) return '';
@@ -132,7 +132,7 @@ export async function saveNote(key, value) {
   });
 }
 
-// ==== ITENS DA TABELA (localStorage - com isolamento por usuário) ====
+
 
 export function getItems() {
   const user = getCurrentUser();
@@ -167,7 +167,7 @@ export function saveItems(items) {
   }
 }
 
-// ==== FUNÇÃO PARA DEBUG/TESTES ====
+
 
 export function debugShowAllUsers() {
   console.log('=== DADOS SALVOS POR USUÁRIO ===');
@@ -179,7 +179,7 @@ export function debugShowAllUsers() {
     console.log('Nenhum usuário logado');
   }
   
-  // Mostra todas as chaves do localStorage
+  
   console.log('\n=== TODAS AS CHAVES NO LOCALSTORAGE ===');
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
